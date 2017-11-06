@@ -73,7 +73,7 @@ lane :release do |options|
   push_to_git_remote
 
   set_github_release(
-    repository_name: 'jasl/RouterX',
+    repository_name: 'castlery/RouterX',
     api_token: ENV['GITHUB_TOKEN'],
     name: target_version,
     tag_name: target_version,

@@ -24,8 +24,8 @@ public struct RoutingPatternScanner {
         if self.isEOF {
             return nil
         }
-
-        let firstChar = self.unScannedFragment.characters.first!
+        
+        let firstChar = self.unScannedFragment.first!
 
         self.position = expression.index(position, offsetBy: 1)
 
@@ -44,7 +44,7 @@ public struct RoutingPatternScanner {
 
         var fragment = ""
         var stepPosition = 0
-        for char in self.unScannedFragment.characters {
+        for char in self.unScannedFragment {
             if RoutingPatternScanner.stopWordsSet.contains(char) {
                 break
             }

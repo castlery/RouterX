@@ -24,7 +24,7 @@ public struct URLPathScanner {
             return nil
         }
 
-        let firstChar = self.unScannedFragment.characters.first!
+        let firstChar = self.unScannedFragment.first!
       
         self.position = path.index(self.position, offsetBy: 1)
 
@@ -39,7 +39,7 @@ public struct URLPathScanner {
 
         var fragment = ""
         var stepPosition = 0
-        for char in self.unScannedFragment.characters {
+        for char in self.unScannedFragment {
             if URLPathScanner.stopWordsSet.contains(char) {
                 break
             }
